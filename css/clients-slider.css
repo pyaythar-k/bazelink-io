@@ -1,0 +1,82 @@
+/* Client Brand Slider Styles */
+.clients-slider {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+.clients-slider__container {
+  display: flex;
+  align-items: center;
+  animation: slideLogos 30s linear infinite;
+  width: max-content;
+}
+
+.clients-slider__item {
+  flex: 0 0 auto;
+  padding: 0 2rem;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.clients-slider__item:hover {
+  opacity: 1;
+}
+
+.clients-slider__logo {
+  height: 150px;
+  width: auto;
+  object-fit: contain;
+}
+
+@keyframes slideLogos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Ensure the slider works well in dark mode */
+body.dark-theme .clients-slider {
+  background-color: var(--secondary-bg);
+}
+
+/* Make the slider responsive */
+@media (max-width: 768px) {
+  .clients-slider__logo {
+    height: 60px;
+  }
+
+  .clients-slider__item {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .clients-slider__logo {
+    height: 50px;
+  }
+
+  .clients-slider__item {
+    padding: 0 1rem;
+  }
+}
+
+/* Fix for dark theme visibility issues */
+body.dark-theme .theme-toggle svg,
+body.dark-theme .mobile-menu-toggle svg {
+  stroke: white;
+  fill: none;
+}
+
+body.dark-theme .mobile-menu-toggle {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  padding: 8px;
+}
+
+body.dark-theme .theme-toggle {
+  background-color: rgba(255, 255, 255, 0.1);
+}

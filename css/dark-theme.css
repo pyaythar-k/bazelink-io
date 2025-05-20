@@ -1,0 +1,108 @@
+/* Dark Theme CSS for Bazelink Website */
+
+body.dark-theme {
+  /* Dark Mode Colors */
+  --primary-color: #2a9d8f;
+  --secondary-color: #275a42;
+  --accent-color: #f4a261;
+  --background-color: #121212;
+  --secondary-bg: #1e1e1e;
+  --text-color: #e0e0e0;
+  --light-text: #aaaaaa;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .header {
+  background-color: var(--background-color);
+  box-shadow: var(--shadow-sm);
+}
+
+body.dark-theme .hero {
+  background-image: url("../img/hero/hero-bg-dark.jpg");
+}
+
+body.dark-theme .service-card,
+body.dark-theme .portfolio-card__content,
+body.dark-theme .testimonial-card {
+  background-color: var(--secondary-bg);
+}
+
+body.dark-theme .portfolio-card__tag {
+  background-color: rgba(42, 157, 143, 0.2);
+}
+
+body.dark-theme .nav__link {
+  color: var(--text-color);
+}
+
+body.dark-theme .theme-toggle svg {
+  fill: none;
+  stroke: white;
+}
+
+body.dark-theme .mobile-menu-toggle svg {
+  stroke: white;
+}
+
+body.dark-theme .theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6 {
+  color: var(--secondary-color);
+}
+
+body.dark-theme .btn--secondary {
+  border-color: var(--primary-color);
+}
+
+body.dark-theme .btn--secondary:hover {
+  background-color: rgba(42, 157, 143, 0.2);
+}
+
+body.dark-theme .section--alt {
+  background-color: var(--secondary-bg);
+}
+
+/* Fix for dark theme visibility issues */
+body.dark-theme .theme-toggle {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  padding: 8px;
+}
+
+body.dark-theme .mobile-menu-toggle {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  padding: 8px;
+}
+
+/* Make contact button more prominent */
+body.dark-theme .contact .btn--secondary {
+  background-color: #f4a261; /* Using accent color for better contrast */
+  color: #121212; /* Dark text on light button for maximum readability */
+  border: 2px solid #f4a261;
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(244, 162, 97, 0.4);
+  position: relative;
+  z-index: 1;
+}
+
+body.dark-theme .contact .btn--secondary:hover {
+  background-color: #e76f51; /* Slightly different color on hover */
+  border-color: #e76f51;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(244, 162, 97, 0.6);
+}
